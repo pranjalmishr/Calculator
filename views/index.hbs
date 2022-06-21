@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset=utf-8 />
+<title>JavaScript program to calculate multiplication and division of two numbers </title>
+<style type="text/css">
+body {margin: 30px;}
+</style> 
+</head>
+<body>
+<form>
+num1 : <input type="text" id="firstNumber" /><br>
+num2: <input type="text" id="secondNumber" /><br>
+<input type="button" onClick="Add()" Value="Addition" />
+<input type="button" onClick="Sub()" Value="Substraction" />
+<input type="button" onClick="MultiplyBy()" Value="Multiply" />
+</form>
+<p>Answer : <br>
+<span id = "result"></span>
+</p>
+<script>
+  function additionBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 + num2;
+}
+
+function substractionBy() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 - num2;
+}
+function multiplyBy() 
+{
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = num1 * num2;
+}
+</script>
+</body>
+</html>
