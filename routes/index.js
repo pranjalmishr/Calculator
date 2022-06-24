@@ -29,7 +29,7 @@ router.all('/add', function (req, res, next) {
   console.log(result);
   res.json(result);
   con.getConnection(function (err, connection) {
-    connection.query("INSERT INTO pranjal_cal (num1, num2 , op, res) VALUES ('" + num1 + "', '" + num2 + "','" + optr + "','" + result + "')", function (err, rows) {
+    connection.query("INSERT INTO pranjal (num1, num2 , op, res) VALUES ('" + num1 + "', '" + num2 + "','" + optr + "','" + result + "')", function (err, rows) {
       connection.release();
       if (err) throw err;
       else console.log(rows.length);
@@ -47,7 +47,7 @@ router.all('/sub', function (req, res, next) {
   console.log(result);
   res.json(result);
   con.getConnection(function (err, connection) {
-    connection.query("INSERT INTO pranjal_cal (num1, num2 , op, res) VALUES ('" + num1 + "', '" + num2 + "','" + optr + "','" + result + "')", function (err, rows) {
+    connection.query("INSERT INTO pranjal (num1, num2 , op, res) VALUES ('" + num1 + "', '" + num2 + "','" + optr + "','" + result + "')", function (err, rows) {
       connection.release();
       if (err) throw err;
       else console.log(rows.length);
@@ -65,7 +65,7 @@ router.all('/mul', function (req, res, next) {
   console.log(result);
   res.json(result);
   con.getConnection(function (err, connection) {
-    connection.query("INSERT INTO pranjal_cal (num1, num2 , op, res) VALUES ('" + num1 + "', '" + num2 + "','" + optr + "','" + result + "')", function (err, rows) {
+    connection.query("INSERT INTO pranjal (num1, num2 , op, res) VALUES ('" + num1 + "', '" + num2 + "','" + optr + "','" + result + "')", function (err, rows) {
       connection.release();
       if (err) throw err;
       else console.log(rows.length);
